@@ -7,7 +7,7 @@ import { Program, Provider, web3 } from "@project-serum/anchor";
 import kp from "./keypair.json";
 
 // SystemProgram is a reference to the Solana runtime!
-const { SystemProgram, Keypair } = web3;
+const { SystemProgram } = web3;
 
 const arr = Object.values(kp._keypair.secretKey);
 const secret = new Uint8Array(arr);
@@ -221,7 +221,7 @@ const App = () => {
           <div className="gif-grid">
             {gifList.map((item) => (
               <div className="gif-item" key={item.gifLink}>
-                <img src={item.gifLink} />
+                <img src={item.gifLink} alt="A cool gif" />
               </div>
             ))}
           </div>
